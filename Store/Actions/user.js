@@ -2,7 +2,8 @@
 /*** Types Actions ***/
 /*********************/
 
-export const SUCCESS_LOGIN = 'USER_SUCCESS_LOGIN';
+export const SUCCESS_LOGIN  = 'USER_SUCCESS_LOGIN';
+export const FAILURE        = 'USER_FAILURE';
 
 /******************************/
 /*** Fontions Actions Fetch ***/
