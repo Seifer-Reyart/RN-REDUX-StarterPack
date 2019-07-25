@@ -29,7 +29,9 @@ class Connexion extends Component {
       */
 
       try {
-          let res = await connexion(email, password)
+          console.log("first")
+          let res = await this.props.connexion(email, password)
+          console.log("second")
           if (res.success) {
               console.log(res)
               this.props.navigation.navigate('Welcome')
@@ -107,9 +109,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-
+    connexion
   };
 };
 
 
-export default connect(mapStateToProps/*, mapDispatchToProps*/)(Connexion)
+export default connect(mapStateToProps, {connexion})(Connexion)

@@ -14,17 +14,19 @@ export const SUCCESS_LOGIN = 'USER_SUCCESS_LOGIN';
 const url = 'https://ideel.io:8000';
 /**********************************/
 
+/******* TEST en dur *******/
+var user = {
+    nom: 'toto',
+    prenom: 'yolo',
+    email: 'toto@gmail.com',
+    Description: "J'ai mis en commentaire, une forme de fetch, libre à vous de la modifier selon les besoin"
+};
+
 export function connexion(email, password) {
-    /******* TEST en dur *******/
-    var user = {
-        nom: 'toto',
-        prenom: 'yolo',
-        email: 'toto@gmail.com',
-        Description: "J'ai mis en commentaire, une forme de fetch, libre à vous de la modifier selon les besoin"
-    }
-    return (dispatch, getState) => {
+    return (dispatch) => {
+        console.log("in dispatch")
         dispatch(setAuth(user))
-        return ({success: true})
+        return {success: true}
     }
     /****************************/
 
